@@ -52,7 +52,7 @@ document.getElementById('cat').innerHTMl = domString;
 import '../styles/main.scss';
 
 const init = () => {
-  $('#app').html('<h1>HELLO! You are up and running!</h1>');
+  document.querySelector('#app').innerHTML = '<h1>HELLO! You are up and running!</h1>');
   console.log('YOU ARE UP AND RUNNING!');
 };
 
