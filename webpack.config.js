@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const dotenv = require('dotenv').config({path: __dirname + '/.env'});
 module.exports = {
   entry: './src/javascripts/main.js',
   devtool: "eval-source-map",
@@ -11,7 +12,7 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: "eslint-loader",
-	options: {
+	      options: {
           formatter: require('eslint/lib/cli-engine/formatters/stylish')
         }
       },
@@ -40,7 +41,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
+        test: /\.(png|svg|jpg|jpeg|gif)$/,
         use: ['file-loader']
       },
       {
@@ -61,7 +62,10 @@ module.exports = {
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery"
-    })
+    }),
+    new webpack.DefinePlugin( {
+      'process.env': JSON.stringify(dotenv.parsed)
+    }),
   ],
   output: {
 		path: __dirname + "/build",
