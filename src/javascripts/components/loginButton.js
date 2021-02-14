@@ -12,4 +12,4 @@ const loginButton = () => {
   $('#google-auth').click(signMeIn);
 };
 
-export default { loginButton };
+export default loginButton;
