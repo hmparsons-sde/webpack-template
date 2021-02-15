@@ -47,9 +47,11 @@ document.getElementById('cat').innerHTMl = domString;
 ```
 
 ### Importing CSS/SCSS
+**NOTE:** We will be using SCSS files. They are used the same way your CSS files work, with some added benefits that we will discuss later.
+
 Since Webpack is making the connection to the JS and CSS for us and we are no longer manually adding links or script tags to our HTML, we have to get our styles to the application some way...
 
-Here is how we so it using webpack:
+Here is how we add our styles using webpack:
 
 ```js
 import '../styles/main.scss';
