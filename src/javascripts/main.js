@@ -1,5 +1,5 @@
 // USE WITH FIREBASE AUTH
-// import checkLoginStatus from './helpers/authentication';
+// import checkLoginStatus from './helpers/auth';
 
 import '../styles/main.scss';
 
