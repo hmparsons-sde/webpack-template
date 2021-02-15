@@ -18,7 +18,11 @@ Webpack is a task runner and a module bundler. It originally started as a module
 
 3. Click the **GREEN** "Create repository from template" button
 4. Clone your new repo to your local machine
-5. Start working!
+5. Go into the new directory and run this command to keep your .env file private
+    ```shell
+    git rm --cached .env && git add -A && git commit -m "ignored env file"
+    ```
+6. Start working!
 
 ## Starting the Project
 1. Open the `package.json` file and change the `name` property to the name of your application, and `author` to  your name.
@@ -79,3 +83,5 @@ const examplePromise = () => {
 
 - Build Command: `npm run build`
 - Publish directory: `build`
+- Add Environmental Variables
+    - Any Enviromental varibales you are using in your .env file should be added to Netlify. Go to Site settings > Build & deploy > Environment > Environment variables and add them there.
