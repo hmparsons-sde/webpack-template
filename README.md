@@ -22,7 +22,7 @@ Webpack is a task runner and a module bundler. It originally started as a module
 
 ## Starting the Project
 1. Open the `package.json` file and change the `name` property to the name of your application, and `author` to  your name.
-1. Remove `sample` from the `.env` file. The final file name should be `.env`
+1. Rename the `.sample.env` file to `.env` file. The final file name should be `.env`
 1. From your command line, be in the root directory and run `npm install` OR `npm i` for short.
 1. To start your application, run `npm start`
 
