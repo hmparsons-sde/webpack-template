@@ -64,7 +64,7 @@ module.exports = {
       jQuery: "jquery"
     }),
     new webpack.DefinePlugin( {
-      'process.env': JSON.stringify(dotenv.parsed)
+      'process.env': JSON.stringify(process.env || dotenv.parsed),
     }),
   ],
   output: {
