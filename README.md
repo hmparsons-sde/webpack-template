@@ -13,9 +13,8 @@ Webpack is a task runner and a module bundler. It originally started as a module
 #### 2. Make sure YOUR github account is selected in the dropdown and name your project
 ![Create Project](./documentation/createproject.png)
 
-3. Click the **GREEN** "Create repository from template" button
-4. Clone your new repo to your local machine
-5. Go to the "Starting the Project" section
+3. Clone your new repo to your local machine
+4. Go to the **NEXT** section
 
 ## Starting the Project
 1. Open the `package.json` file and change the `name` property to the name of your application, and `author` to  your name.
@@ -26,11 +25,13 @@ Webpack is a task runner and a module bundler. It originally started as a module
 ### If you see this, you are set to go!
 ![LIT](./documentation/lit-screen.png)
 
-**NOTE:** Changes you make to the project will make the browser reload on save...no more hard refresh unless something goes wrong.
+**NOTES:** 
+- Changes you make to the project will make the browser reload on save...no more hard refresh unless something goes wrong.
+- You will no longer be using the `hs -o` command. To start your server, you will run `npm start`
 
 ## Other Important Tidbits
 ### Console messages
-From this time forward, you will be expected to have a clean console in order for your assignments to be approved. This means that the use of `console.log` is acceptable **_(debugger is WAY better though)_** while developing, but will throw a warning in your console like the image below, but all `logs` will have to be removed. You may use `console.error` and `console.warn` in your code however.
+From this time forward, you will be expected to have a clean console in order for your assignments to be approved. This means that the use of `console.log` is acceptable **_(debugger is WAY better though)_** while developing, but will throw an error in your console like the image below, but all `logs` will have to be removed. You may use `console.error` and `console.warn` in your code however for messages. These need to all be removed before pushing to production unless they are vital info for the user.
 
 ![not acceptable](./documentation/notacceptable.png)
 
@@ -46,6 +47,10 @@ document.getElementById('cat').innerHTMl = domString;
 ```
 
 ### Importing CSS/SCSS
+Since Webpack is making the connection to the JS and CSS for us and we are no longer manually adding links or script tags to our HTML, we have to get our styles to the application some way...
+
+Here is how we so it using webpack:
+
 ```js
 import '../styles/main.scss';
 
@@ -77,7 +82,7 @@ const examplePromise = () => {
 
 - Build Command: `npm run build`
 - Publish directory: `build`
-- Add Environmental Variables
+- Add Environmental Variables (NOT REQUIRED for Apps that do not use API Keys, etc)
     - Any Enviromental varibales you are using in your `.env` file should be added to Netlify. 
         - Go to Site settings > Build & deploy > Environment > Environment variables and the keys and values there.
         
